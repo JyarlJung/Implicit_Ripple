@@ -1,0 +1,54 @@
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style/bootstrap.css" />
+    <link rel="stylesheet" href="style/ui.css" />
+    <script src="js/sim.js"></script>
+</head>
+
+
+<body>
+    <div style="display: flex; flex-direction: column; justify-content: center;">
+        <div class="mx-auto mt-3">
+            <center><h2 class="heading">Implicit Hugo-Elias Ripple</h2></center>
+            <canvas id="mainCanvas" width="400" height="400"></canvas>
+            <div class="">
+                <span style="font-size: small" id="fpsText">FPS: 60 Hz</span>
+            </div>
+        </div>
+
+        <div class="mx-auto mt-4">
+            <table class="my-2" style="border: 0; font-size: small;">
+               
+                <tr>
+                    <td class="align-end">
+                        <label>Deltatime scale</label>
+                        <input class="sim-var" type="text" id="txtDeltaTimeScale" />
+                    </td>
+                    <td class="align-end">
+                        <label>Damping per tick</label>
+                        <input class="sim-var" type="text" id="txtDamping" />
+                    </td>
+                    <td class="align-end">
+                        <label>iteration</label>
+                        <input class="sim-var" type="text" id="txtIteration" />
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td colspan="2" style="padding-top: 1em;">
+                        <button type="button" class="btn btn-sm btn-primary" id="btnUpdate">Update</button>
+                        <button type="button" class="btn btn-sm btn-primary" id="btnClear">Clear</button>
+                        <button type="button" class="btn btn-sm btn-primary" id="btnPause">Pause</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
