@@ -1,5 +1,7 @@
 ## Implicit Hugo Elias Ripple
 
+<img width="400" height="401" alt="Animation2" src="https://github.com/user-attachments/assets/fc580b9c-3a96-43bf-9aa0-a896071f2441" />
+
 A WebGL simulation of 2D water ripples using an **Implicit Simulation** applied to the Hugo Elias wave equation.
 Hugo Elias ripple is pretty cheap to use in real-time rendering, but it is limited to spreading 1 pixel per frame unconditionally.
 For example, if it's used in a game, you'll see a different wave speed at 30fps and 60fps.
