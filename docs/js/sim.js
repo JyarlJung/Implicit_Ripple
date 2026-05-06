@@ -569,9 +569,9 @@ void main()
     float c = 44.194;
 
     float dtt = (dt * c) * (dt * c);
-    float avg = (xL + xR + xB + xT);
+    float sum = (xL + xR + xB + xT);
 
-    float result = ((bC * 2.0) - bP + (dtt * avg)) / (1.0 + 4.0 * dtt);
+    float result = ((bC * 2.0) - bP + (dtt * sum)) / (1.0 + 4.0 * dtt);
 
     gl_FragColor = vec4(result, bC, 0.0, 1.0);
 }`,
