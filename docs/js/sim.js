@@ -1,4 +1,4 @@
-﻿
+
 'use strict';
 
 var gl = null;
@@ -312,8 +312,8 @@ function init() {
     }
 
     params = {
-        dtScale: 0.5,
-        damping: 0.995,
+        dtScale: 1.0,
+        damping: 0.547,
         iteration: 20,
 
         rdv: rdv,
@@ -461,6 +461,7 @@ function computeFields() {
 
     shaders.damping.use();
     shaders.damping.setFloat('damp', params.damping);
+    shaders.damping.setFloat('dt', sim.delta_t * params.dtScale);
     shaders.damping.setTexture('field', fields.ink.front.texture, 0);
     drawQuad(fields.ink.back.buffer);
     fields.ink.swap();
@@ -601,6 +602,7 @@ void main()
 precision highp float;
 
 uniform float damp;
+uniform float dt;
 uniform sampler2D field;
 
 varying vec2 coord;
@@ -608,7 +610,7 @@ varying vec2 coord;
 void main()
 {
 	vec3 u0 = texture2D(field, coord).xyz;
-    u0.x *= damp;
+    u0.x *= pow(0.547, dt);
 	gl_FragColor = vec4(u0, 1.0);
 }`
 };
