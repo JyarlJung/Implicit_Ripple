@@ -610,7 +610,7 @@ varying vec2 coord;
 void main()
 {
 	vec3 u0 = texture2D(field, coord).xyz;
-    u0.x *= pow(0.547, dt);
+    u0.x *= pow(damp, dt);
 	gl_FragColor = vec4(u0, 1.0);
 }`
 };
