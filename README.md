@@ -78,7 +78,7 @@ $$
 
 In code,
 
-    float result = ((bC * 2.0) - bP + (dtt * avg)) / (1.0 + 4.0 * dtt);
+    float result = ((bC * 2.0) - bP + (dtt * sum)) / (1.0 + 4.0 * dtt);
 
 see sim.js, 548 line.
 
